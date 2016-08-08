@@ -16,4 +16,5 @@ cd "/vagrant/installers/${NER_VERSION}"
 cp stanford-ner.jar classifiers/english.all.3class.distsim.crf.ser.gz /srv/stanford-ner/
 
 sudo cp /vagrant/stanford-ner.conf /etc/init
-sudo restart stanford-ner || sudo start stanford-ner
+sudo stop stanford-ner || true
+sudo start stanford-ner
