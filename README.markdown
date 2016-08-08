@@ -2,6 +2,12 @@
 
 Creates a Virtual Machine running the [Stanford Named Entity Recognizer](http://nlp.stanford.edu/software/CRF-NER.shtml) as a server, accessible on port 4465 on your host machine.
 
+The NER Server is loaded with the 3-class Model included with the NER software package. The model applies the classes:
+
+- Location
+- Person
+- Organization
+
 ## Setup
 
 1. [Install Vagrant](https://www.vagrantup.com/downloads.html)
@@ -30,3 +36,4 @@ Here are the current specifications for this server:
 - Memory assigned to the NER application: `1 GB`
 - Port on which the NER server is listening: `4465`
 - Location of the server logs on the VM: `/var/log/upstart/stanford-ner.log`
+- Location of the model that is loaded by the server: `/srv/stanford-ner/english.all.3class.distsim.crf.ser.gz`
